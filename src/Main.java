@@ -11,10 +11,14 @@ public class Main {
     Plane plane=new Plane();
     spbToMoscow(name,plane);
 
+    Velo velo= new Velo();
+        spbToMoscow(name,velo);
+
 
 
     }
-    public static void  spbToMoscow (String name, Transport transport) {
+    public static void  spbToMoscow (String name, Transferer transport) {// используем Transferer, так как мы создали абстрактный метод Transferer, и сделали  клас
+        // Transport наследником класса, Transferer после чего использовали полеморфизм
         transport.transfer(name, " SPB", " MSC");
     }
 }
